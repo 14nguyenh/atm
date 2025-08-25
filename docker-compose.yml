@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: atm-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: atm_db
+      MYSQL_USER: henry
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - /var/lib/mysql
+
